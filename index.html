@@ -88,7 +88,7 @@
 
 
 
-
+    
 
 
 
@@ -96,8 +96,13 @@
     <section class="hero is-small">
         <div class="hero-body">
             <div class="container">
+                <img src="static/images/TFGAN/wenetspeech.png" alt="the image of lps" />
                 <div id="publication-body" class="publication-body img">
+
+                    
+
                     <h2 class="title is-3">WenetSpeech Dataset</h2>
+                    
                     <div class="content has-text-justified">
                         <p>
                             10000+ hours multi-domain transcribed Mandarin Speech Corpus collected from YouTube and Podcast. Optical character recognition (OCR) and automatic speech recognition (ASR) techniques are adopted to label each YouTube and Podcast recording, respectively. To improve the quality of the corpus, we use a novel end-to-end label error detection method to further validate and filter the data.
@@ -150,16 +155,82 @@
                                             <h3>Enhanced</h3>
                                         </center>
                                     </th>
-                                    <th>
+                                    <!-- <th>
                                         <center>
                                             <h3></h3>
                                         </center>
-                                    </th>
+                                    </th> -->
                                 </tr>
                             </thead>
 
 
+                                <script>
 
+
+
+                                    var data = [];
+                                    for(var i=0;i<16;i++)
+                                    {
+                                        var obj = {
+                                            id:`${(i + 1).toString().padStart(2, '0')}`,
+                                            noisy: `N${(i + 1).toString().padStart(2, '0')}`,
+                                            clean: `S${(i + 1).toString().padStart(2, '0')}`,
+                                        };
+
+                                        // 将对象添加到数组中
+                                        data.push(obj);
+                                    }
+                                  
+                                    
+                                    
+
+
+                                  console.log(data);
+
+                                  data.forEach(function(row) {
+                                    document.write(`
+
+                                    
+                                    <tbody>
+                                
+
+                                <tr style="border-top:1px solid white" align="center">
+                                    <td>
+                                        <center>#${row.id}</center>
+                                    </td>
+                                    <td>
+                                        <img src="static/images/TFGAN/${row.noisy}.jpg" alt="the image of lps" />
+                                    </td>
+                                    <td>
+                                        <img src="static/images/TFGAN/${row.clean}.jpg" alt="the image of lps" />
+                                    </td>
+                                </tr>
+
+                                <tr style="border-top:1px solid black" align="center">
+                                    <td>
+                                        <center></center>
+                                    </td>
+                                    <td><audio controls class="audio-player" preload="metadata" style="width:240px;">
+                                            <source src="static/audios/TFGAN/${row.noisy}.wav">
+                                        </audio></td>
+                                    </td>
+                                    <td><audio controls class="audio-player" preload="metadata" style="width:240px;">
+                                            <source src="static/audios/TFGAN/${row.clean}.wav">
+                                        </audio></td>
+                                </tr>
+                                
+                            </tbody>
+
+                                    `);
+                                  });
+                                </script>
+
+
+
+<!-- 
+
+
+                            
                             <tbody>
                                 <tr style="border-top:1px solid black" align="center">
                                     <td>
@@ -172,6 +243,18 @@
                                     <td><audio controls class="audio-player" preload="metadata" style="width:240px;">
                                             <source src="static/audios/TFGAN/S01.wav">
                                         </audio></td>
+                                </tr>
+
+                                <tr style="border-top:1px solid white" align="center">
+                                    <td>
+                                        <center></center>
+                                    </td>
+                                    <td>
+                                        <img src="static/images/TFGAN/N01.png" alt="the image of lps" />
+                                    </td>
+                                    <td>
+                                        <img src="static/images/TFGAN/S01.png" alt="the image of lps" />
+                                    </td>
                                 </tr>
                                 
                             </tbody>
@@ -189,6 +272,18 @@
                                             <source src="static/audios/TFGAN/S02.wav">
                                         </audio></td>
                                 </tr>
+
+                                <tr style="border-top:1px solid white" align="center">
+                                    <td>
+                                        <center></center>
+                                    </td>
+                                    <td>
+                                        <img src="static/images/TFGAN/N02.png" alt="the image of lps" />
+                                    </td>
+                                    <td>
+                                        <img src="static/images/TFGAN/S02.png" alt="the image of lps" />
+                                    </td>
+                                </tr>
                                 
                             </tbody>
                            
@@ -205,6 +300,18 @@
                                             <source src="static/audios/TFGAN/S03.wav">
                                         </audio></td>
                                 </tr>
+
+                                <tr style="border-top:1px solid white" align="center">
+                                    <td>
+                                        <center></center>
+                                    </td>
+                                    <td>
+                                        <img src="static/images/TFGAN/N03.png" alt="the image of lps" />
+                                    </td>
+                                    <td>
+                                        <img src="static/images/TFGAN/S03.png" alt="the image of lps" />
+                                    </td>
+                                </tr>
                                 
                             </tbody>
                             
@@ -220,6 +327,18 @@
                                     <td><audio controls class="audio-player" preload="metadata" style="width:240px;">
                                             <source src="static/audios/TFGAN/S04.wav">
                                         </audio></td>
+                                </tr>
+
+                                <tr style="border-top:1px solid white" align="center">
+                                    <td>
+                                        <center></center>
+                                    </td>
+                                    <td>
+                                        <img src="static/images/TFGAN/N04.png" alt="the image of lps" />
+                                    </td>
+                                    <td>
+                                        <img src="static/images/TFGAN/S04.png" alt="the image of lps" />
+                                    </td>
                                 </tr>
                                 
                             </tbody>
@@ -431,9 +550,9 @@
                                         </audio></td>
                                 </tr>
                                 
-                            </tbody>
+                            </tbody> -->
 
-
+<!-- 
                             
                             <tbody>
                                 <tr style="border-top:1px solid black" align="center">
@@ -500,7 +619,7 @@
                                         </audio></td>
                                 </tr>
                                 
-                            </tbody>
+                            </tbody> -->
 
 
                         </table>
