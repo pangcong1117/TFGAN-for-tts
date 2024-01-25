@@ -86,9 +86,15 @@
 
 
 
-
-
-    
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <div id="publication-body" class="publication-body img">
+                    <h2 class="title is-2">16K Samples Display</h2>
+                </div>
+            </div>
+        </div>
+    </section>      
 
 
 
@@ -96,12 +102,12 @@
     <section class="hero is-small">
         <div class="hero-body">
             <div class="container">
-                <img src="static/images/TFGAN/wenetspeech.png" alt="the image of lps" />
+                
                 <div id="publication-body" class="publication-body img">
 
                     
 
-                    <h2 class="title is-3">WenetSpeech Dataset</h2>
+                    <h2 class="title is-3">1.WenetSpeech Dataset</h2>
                     
                     <div class="content has-text-justified">
                         <p>
@@ -111,7 +117,9 @@
                             Link:   <a href="https://wenet.org.cn/WenetSpeech/">WenetSpeech Dataset</a>
                         </p>
                     </div>
-                    
+                    <div class="image-container" style="display: flex; justify-content: center;">
+                        <img src="static/images/TFGAN/WenetSpeech/wenetspeech.png" alt="the image of lps" />
+                    </div>
 
 
                         
@@ -131,9 +139,7 @@
         <div class="hero-body">
             <div class="container">
                 <div id="publication-body" class="publication-body img">
-                    <h2 class="title is-3">Samples Display</h2>
-
-
+                    
 
                     <div class="content">
                         <br>
@@ -169,7 +175,7 @@
 
 
                                     var data = [];
-                                    for(var i=0;i<16;i++)
+                                    for(var i=0;i<8;i++)
                                     {
                                         var obj = {
                                             id:`${(i + 1).toString().padStart(2, '0')}`,
@@ -195,28 +201,28 @@
                                     <tbody>
                                 
 
-                                <tr style="border-top:1px solid white" align="center">
+                                <tr style="border-top:3px solid black" align="center">
                                     <td>
                                         <center>#${row.id}</center>
                                     </td>
                                     <td>
-                                        <img src="static/images/TFGAN/${row.noisy}.jpg" alt="the image of lps" />
+                                        <img src="static/images/TFGAN/WenetSpeech/${row.noisy}.jpg" alt="the image of lps" />
                                     </td>
                                     <td>
-                                        <img src="static/images/TFGAN/${row.clean}.jpg" alt="the image of lps" />
+                                        <img src="static/images/TFGAN/WenetSpeech/${row.clean}.jpg" alt="the image of lps" />
                                     </td>
                                 </tr>
 
-                                <tr style="border-top:1px solid black" align="center">
+                                <tr style="border-top:1px solid white" align="center">
                                     <td>
                                         <center></center>
                                     </td>
                                     <td><audio controls class="audio-player" preload="metadata" style="width:240px;">
-                                            <source src="static/audios/TFGAN/${row.noisy}.wav">
+                                            <source src="static/audios/TFGAN/WenetSpeech/${row.noisy}.wav">
                                         </audio></td>
                                     </td>
                                     <td><audio controls class="audio-player" preload="metadata" style="width:240px;">
-                                            <source src="static/audios/TFGAN/${row.clean}.wav">
+                                            <source src="static/audios/TFGAN/WenetSpeech/${row.clean}.wav">
                                         </audio></td>
                                 </tr>
                                 
