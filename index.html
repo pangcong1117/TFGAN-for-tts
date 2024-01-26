@@ -107,7 +107,7 @@
 
                     
 
-                    <h2 class="title is-3">1.WenetSpeech Dataset</h2>
+                    <h2 class="title is-3">1.WenetSpeech Dataset (TV series clips)</h2>
                     
                     <div class="content has-text-justified">
                         <p>
@@ -121,7 +121,7 @@
                         <img src="static/images/TFGAN/WenetSpeech/wenetspeech.png" alt="the image of lps" />
                     </div>
 
-
+                        
                         
 
                     </div>
@@ -148,7 +148,7 @@
                                 <tr align="center">
                                     <th>
                                         <center>
-                                            <h3>ID</h3>
+                                            <h3></h3>
                                         </center>
                                     </th>
                                     <th>
@@ -201,9 +201,9 @@
                                     <tbody>
                                 
 
-                                <tr style="border-top:3px solid black" align="center">
+                                <tr style="border-top:2px solid black" align="center">
                                     <td>
-                                        <center>#${row.id}</center>
+                                        <center>TV series clips #${row.id}</center>
                                     </td>
                                     <td>
                                         <img src="static/images/TFGAN/WenetSpeech/${row.noisy}.jpg" alt="the image of lps" />
@@ -213,16 +213,162 @@
                                     </td>
                                 </tr>
 
-                                <tr style="border-top:1px solid white" align="center">
+                                <tr  align="center">
                                     <td>
                                         <center></center>
                                     </td>
-                                    <td><audio controls class="audio-player" preload="metadata" style="width:240px;">
+                                    <td><audio controls class="audio-player" preload="metadata" style="width:500px;">
                                             <source src="static/audios/TFGAN/WenetSpeech/${row.noisy}.wav">
                                         </audio></td>
                                     </td>
-                                    <td><audio controls class="audio-player" preload="metadata" style="width:240px;">
+                                    <td><audio controls class="audio-player" preload="metadata" style="width:500px;">
                                             <source src="static/audios/TFGAN/WenetSpeech/${row.clean}.wav">
+                                        </audio></td>
+                                </tr>
+                                
+                            </tbody>
+
+                                    `);
+                                  });
+                                </script>
+
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <div id="publication-body" class="publication-body img">
+                    <h2 class="title is-2">48K Samples Display</h2>
+                </div>
+            </div>
+        </div>
+    </section>       -->
+
+
+
+    
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                
+                <div id="publication-body" class="publication-body img">
+
+                    
+
+                    <h2 class="title is-3">2.Game commentary scene</h2>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="image-container" style="display: flex; justify-content: center;">
+                        <img src="static/images/TFGAN/game_16k/game.jpg" alt="the image of lps" style="width: 1000px; height: auto;" />
+                    </div>
+                    <br>
+                    <br>
+                        
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <div id="publication-body" class="publication-body img">
+                    
+
+                    <div class="content">
+                        <br>
+                        <table>
+                            <thead>
+                                <tr align="center">
+                                    <th>
+                                        <center>
+                                            <h3></h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Noisy</h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Enhanced</h3>
+                                        </center>
+                                    </th>
+                                    <!-- <th>
+                                        <center>
+                                            <h3></h3>
+                                        </center>
+                                    </th> -->
+                                </tr>
+                            </thead>
+
+
+                                <script>
+
+
+
+                                    var data = [];
+                                    for(var i=0;i<4;i++)
+                                    {
+                                        var obj = {
+                                            id:`${(i + 1).toString().padStart(1, '0')}`,
+                                            noisy: `n${(i + 1).toString().padStart(1, '0')}`,
+                                            clean: `s${(i + 1).toString().padStart(1, '0')}`,
+                                        };
+                                        // var aaa=0
+
+                                        // 将对象添加到数组中
+                                        data.push(obj);
+                                    }
+                                  
+                                    
+                                    
+
+
+                                  console.log(data);
+
+                                  data.forEach(function(row) {
+                                    document.write(`
+
+                                    
+                                    <tbody>
+                                
+
+                                <tr style="border-top:2px solid black" align="center">
+                                    <td>
+                                        <center>Game commentary scene #${row.id}</center>
+                                    </td>
+                                    <td>
+                                        <img src="static/images/TFGAN/game_16k/game16k_${row.noisy}.jpg" alt="the image of lps" />
+                                    </td>
+                                    <td>
+                                        <img src="static/images/TFGAN/game_16k/game16k_${row.clean}.jpg" alt="the image of lps" />
+                                    </td>
+                                </tr>
+
+                                <tr  align="center">
+                                    <td>
+                                        <center></center>
+                                    </td>
+                                    <td><audio controls class="audio-player" preload="metadata" style="width:500px;">
+                                            <source src="static/audios/TFGAN/game_16k/game16k_${row.noisy}.wav">
+                                        </audio></td>
+                                    </td>
+                                    <td><audio controls class="audio-player" preload="metadata" style="width:500px;">
+                                            <source src="static/audios/TFGAN/game_16k/game16k_${row.clean}.wav">
                                         </audio></td>
                                 </tr>
                                 
