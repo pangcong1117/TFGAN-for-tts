@@ -372,6 +372,9 @@
                                         </audio></td>
                                 </tr>
                                 
+
+
+                                
                             </tbody>
 
                                     `);
@@ -385,6 +388,235 @@
             </div>
         </div>
     </section>
+
+
+
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <div id="publication-body" class="publication-body img">
+                    <h2 class="title is-2">48K Samples Display</h2>
+                </div>
+            </div>
+        </div>
+    </section>      
+
+
+
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                
+                <div id="publication-body" class="publication-body img">
+
+                    
+
+                    <h2 class="title is-3">1.Controllable noise reduction attempts</h2>
+                    
+                    <div class="content has-text-justified">
+                        <p>
+                            In the Game commentary scene, we tried to increase the control factor to perform controllable noise reduction on the 48k noisy audio.
+                        </p>
+                    </div>
+
+
+                        
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <div id="publication-body" class="publication-body img">
+                    
+
+                    <div class="content">
+                        <br>
+                        
+
+
+                                <script>
+
+
+
+                                    var data = [];
+                                    for(var i=0;i<10;i++)
+                                    {
+                                        var obj = {
+                                            id:`${(i + 1).toString().padStart(1, '0')}`,
+                                            noisy: `qiang1_${(i + 1).toString().padStart(2, '0')}`,
+                                        };
+                                        // var aaa=0
+
+                                        // 将对象添加到数组中
+                                        data.push(obj);
+                                    }
+                                  
+                                    
+                                    
+
+
+                                  console.log(data);
+
+                                  data.forEach(function(row) {
+                                    document.write(`
+
+                                    
+                                    <tbody>
+                                
+                                        <table>
+                                <tr style="border-top:5px solid black" align="center">
+                                    <th>
+                                        <center>
+                                            <h3></h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Coefficient 0%</h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Coefficient 20%</h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Coefficient 50%</h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Coefficient 80%</h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Coefficient 100%</h3>
+                                        </center>
+                                    </th>
+
+                                </tr>
+ 
+                                            
+                                <tr style="border: none;" align="center">
+                                    <td>
+                                        
+                                    </td>
+                                    <td><audio controls class="audio-player" preload="metadata" ">
+                                            <source src="static/audios/TFGAN/game_48k_control/enhance_0/${row.noisy}.wav">
+                                        </audio>
+
+                                    </td>
+
+                                    </td>
+                                    <td><audio controls class="audio-player" preload="metadata" ">
+                                            <source src="static/audios/TFGAN/game_48k_control/enhance_0.2/${row.noisy}.wav">
+                                        </audio></td>
+                                    </td>
+                                    <td><audio controls class="audio-player" preload="metadata" ">
+                                            <source src="static/audios/TFGAN/game_48k_control/enhance_0.5/${row.noisy}.wav">
+                                        </audio></td>
+                                    </td>
+                                    <td><audio controls class="audio-player" preload="metadata" ">
+                                            <source src="static/audios/TFGAN/game_48k_control/enhance_0.8/${row.noisy}.wav">
+                                        </audio></td>
+                                    </td>
+                                    <td><audio controls class="audio-player" preload="metadata" ">
+                                            <source src="static/audios/TFGAN/game_48k_control/enhance_1/${row.noisy}.wav">
+                                        </audio></td>
+                                    </td>
+   
+                                </tr>
+                            </table>
+
+                                <table>
+
+                             
+                                <tr style="border: none;" align="center">
+                                    <th>
+                                        <center><h3>Game commentary </br> scene #${row.id}</h3></center>
+                                    
+                                    </th>
+
+
+                                    <th style="width:500px;">
+                                        <center>
+                                            <h3><img src="static/images/TFGAN/game_48k_control/enhance_0/${row.noisy}.jpg" alt="the image of lps" /> </h3>
+                                        </center>
+                                    </th>
+
+                                    <th style="width:200px;">
+                                        <center>
+                                            <h3><img src="static/images/TFGAN/game_48k_control/jiantou.jpg" alt="the image of lps" /> </h3>
+                                        </center>
+                                    </th>
+
+                                    <th style="width:500px;">
+                                        <center>
+                                            <h3><img src="static/images/TFGAN/game_48k_control/enhance_1/${row.noisy}.jpg" alt="the image of lps" /> </h3>
+                                        </center>
+                                    </th>
+
+                                </tr>
+
+                        
+
+
+                            </table>
+
+                            <br>
+                            
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            
+
+                                                                    
+                            
+                                        
+
+                                    `);
+                                  });
+                                </script>
+                            
+                                
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    
   
 </body>
 
